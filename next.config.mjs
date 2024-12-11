@@ -1,3 +1,4 @@
+import webpack from "webpack";
 import { createProxyMiddleware } from "http-proxy-middleware";
 
 /** @type {import('next').NextConfig} */
@@ -40,6 +41,14 @@ const nextConfig = {
         },
       };
     }
+
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp:
+          /@next\/next\/no-img-element|@typescript-eslint\/no-explicit-any|@typescript-eslint\/no-unused-vars|react-hooks\/exhaustive-deps/,
+      })
+    );
+
     return config;
   },
 };

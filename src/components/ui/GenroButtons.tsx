@@ -14,6 +14,7 @@ const genres = [
   "K-pop",
   "Clássica",
   "Dance",
+  "Alternativo",
 ];
 
 export default function GenreButtons({

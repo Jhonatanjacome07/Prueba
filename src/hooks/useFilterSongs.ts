@@ -17,12 +17,13 @@ export const useFilterSongs = (
         const genres = Array.isArray(song.album.genres) ? song.album.genres : [song.album.genres];
         const matchesGenre =
             selectedGenre === "Todos" || genres.some((genre) =>
-                genre.toLowerCase().includes(selectedGenre.toLowerCase())
+                genre.toLowerCase() === selectedGenre.toLowerCase()
             );
 
         return matchesSearch && matchesGenre;
     });
 };
+
 
 
 /*import { Song } from "@/types/ui/Song";

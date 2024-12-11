@@ -4,13 +4,13 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["cdn-images.dzcdn.net", "api.deezer.com"], //rutas para las imágenes de las canciones
+    domains: ["cdn-images.dzcdn.net", "api.deezer.com"],
   },
   async rewrites() {
     return [
       {
         source: "/api/:path*",
-        destination: "http://144.33.15.219:8080/:path*", // Proxy to Backend
+        destination: "http://144.33.15.219:8080/:path*",
       },
     ];
   },

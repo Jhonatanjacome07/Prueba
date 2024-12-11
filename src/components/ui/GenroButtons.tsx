@@ -15,6 +15,7 @@ const genres = [
   "Clássica",
   "Dance",
   "Alternativo",
+  "Electro",
 ];
 
 export default function GenreButtons({

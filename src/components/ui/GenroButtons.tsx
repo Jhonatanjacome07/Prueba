@@ -7,10 +7,16 @@ interface GenreButtonsProps {
 
 const genres = [
   "Todos",
+<<<<<<< HEAD
   "Electrónica",
   "Pop",
   "Rock",
   "Rap",
+=======
+  "Pop",
+  "Rock",
+  "Rap/Hip Hop",
+>>>>>>> d86d7ce (arreglo)
   "K-pop",
   "Clássica",
   "Dance",

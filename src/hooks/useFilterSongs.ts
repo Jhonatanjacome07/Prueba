@@ -1,5 +1,8 @@
 import { Song } from "@/types/ui/Song";
+<<<<<<< HEAD
 
+=======
+>>>>>>> d86d7ce (arreglo)
 export const useFilterSongs = (
     songs: Song[],
     searchTerm: string,
@@ -16,13 +19,26 @@ export const useFilterSongs = (
 
         const genres = Array.isArray(song.album.genres) ? song.album.genres : [song.album.genres];
         const matchesGenre =
+<<<<<<< HEAD
             selectedGenre === "Todos" || genres.some((genre) =>
                 genre.toLowerCase() === selectedGenre.toLowerCase()
             );
+=======
+            selectedGenre === "Todos" || genres.some((genre) => {
+                if (selectedGenre.toLowerCase().includes('/')) {
+                    // Use includes for compound genres
+                    return genre.toLowerCase().includes(selectedGenre.toLowerCase());
+                } else {
+                    // Use exact match for single-word genres
+                    return genre.toLowerCase() === selectedGenre.toLowerCase();
+                }
+            });
+>>>>>>> d86d7ce (arreglo)
 
         return matchesSearch && matchesGenre;
     });
 };
+<<<<<<< HEAD
 
 
 
@@ -50,3 +66,5 @@ export const useFilterSongs = (
     });
 };
 */
+=======
+>>>>>>> d86d7ce (arreglo)

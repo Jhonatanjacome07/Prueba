@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+<<<<<<< HEAD
 import { formatDuration } from "@/utils/formatDuration";
+=======
+import { formatDuration } from "@/app/(page)/explore/services/formatDuration";
+>>>>>>> d86d7ce (arreglo)
 import {
   SkipBack,
   Rewind,
@@ -39,7 +43,11 @@ const Player: React.FC<PlayerProps> = ({
   onPlayPause,
   onNext,
   onPrevious,
+<<<<<<< HEAD
   onFavoriteToggle,
+=======
+
+>>>>>>> d86d7ce (arreglo)
   onClose,
 }) => {
   const [progress, setProgress] = useState(0);
